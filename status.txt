@@ -1,0 +1,48 @@
+OpenLink Virtuoso Interactive SQL (Virtuoso)
+Version 07.20.3234 as of May 18 2022
+Type HELP; for help and EXIT; to exit.
+Connected to OpenLink Virtuoso
+Driver: 07.20.3234 OpenLink Virtuoso ODBC Driver
+REPORT
+VARCHAR
+_______________________________________________________________________________
+
+OpenLink Virtuoso  Server
+Version 07.20.3234-pthreads for Linux as of May 18 2022 
+Started on: 2022-08-14 16:54 GMT+0
+ 
+Database Status:
+  File size 69206016, 8448 pages, 6114 free.
+  20000 buffers, 902 used, 0 dirty 0 wired down, repl age 0 0 w. io 0 w/crsr.
+  Disk Usage: 931 reads avg 0 msec, 0% r 0% w last  0 s, 125 writes flush          0 MB/s,
+    25 read ahead, batch = 15.  Autocompact 21 in 20 out, 4% saved.
+Gate:  127 2nd in reads, 0 gate write waits, 0 in while read 0 busy scrap. 
+Log = ../database/virtuoso.trx, 185 bytes
+2249 pages have been changed since last backup (in checkpoint state)
+Current backup timestamp: 0x0000-0x00-0x00
+Last backup date: unknown
+Clients: 1 connects, max 1 concurrent
+RPC: 4 calls, 1 pending, 1 max until now, 0 queued, 0 burst reads (0%), 0 second 0M large, 10M max
+Checkpoint Remap 57 pages, 0 mapped back. 0 s atomic time.
+    DB master 8448 total 6114 free 57 remap 0 mapped back
+   temp  256 total 251 free
+ 
+Lock Status: 0 deadlocks of which 0 2r1w, 0 waits,
+   Currently 1 threads running 0 threads waiting 0 threads in vdb.
+Pending:
+ 
+Client 1111:1:  Account: dba, 200 bytes in, 286 bytes out, 1 stmts.
+PID: 70, OS: unix, Application: unknown, IP#: 127.0.0.1
+Transaction status: PENDING, 1 threads.
+Locks: 
+ 
+ 
+Running Statements:
+ Time (msec) Text
+           4 status()
+ 
+ 
+Hash indexes
+ 
+
+37 Rows. -- 4 msec.
