@@ -1,0 +1,3 @@
+FROM openlink/virtuoso-opensource-7:latest
+# install jq
+RUN apt update && apt install -y jq

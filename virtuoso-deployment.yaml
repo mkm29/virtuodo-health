@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: virtuoso
+  namespace: kobai
+spec:
+  selector:
+    matchLabels:
+      app: virtuoso
+  template:
+    metadata:
+      labels:
+        app: virtuoso
+    spec:
+      containers:
+      - name: virtuoso
+        image: localhost:5000/openlink/virtuoso:7.2
+        livenessProbe:
+          exec:
+            command:
+              - "sh"
+              - "-c"
+              - "curl -s http://localhost:3333/health | jq -e '.Virtuoso.Status == true'"
+          initialDelaySeconds: 60
+        env:
+        - name: DBA_PASSWORD
+          value: dba
+        resources:
+          limits:
+            memory: "2Gi"
+            cpu: "1"
+        ports:
+        - containerPort: 1111
+      - name: virtuoso-health
+        image: localhost:5000/virtuoso:health-0.2.4
+        ports:
+        - containerPort: 3333
